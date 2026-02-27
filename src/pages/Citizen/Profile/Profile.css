@@ -1,0 +1,182 @@
+.profile-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.profile-page-wrapper .page-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    box-shadow: 0 4px 14px rgba(26, 86, 219, 0.3);
+    transition: var(--transition);
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 1.5rem;
+}
+
+.profile-row:last-child {
+    border-bottom: none;
+}
+
+.profile-label {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    white-space: nowrap;
+    min-width: 90px;
+    letter-spacing: 0.2px;
+}
+
+.profile-value {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: right;
+    letter-spacing: 0.1px;
+}
+
+.profile-mono {
+    font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: var(--bg-tertiary);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+}
+
+.profile-role-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    background: var(--primary-50);
+    color: var(--primary-700);
+    border: 1px solid var(--primary-200);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+[data-theme="dark"] .profile-role-badge {
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--primary-400);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.profile-edit-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+    flex: 1;
+    max-width: 280px;
+}
+
+.profile-input {
+    width: 100%;
+    padding: 0.55rem 0.85rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    outline: none;
+    transition: var(--transition);
+    text-align: right;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+.profile-input:focus {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.profile-input-error {
+    border-color: var(--danger) !important;
+}
+
+.profile-field-error {
+    font-size: 0.72rem;
+    color: var(--danger);
+    font-weight: 500;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 0.25rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .profile-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .profile-edit-field {
+        max-width: 100%;
+        align-items: flex-start;
+    }
+
+    .profile-input {
+        text-align: left;
+    }
+
+    .profile-value {
+        text-align: left;
+    }
+}
